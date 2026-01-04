@@ -9,7 +9,7 @@ This is a simple calculator project built using HTML, CSS, and JavaScript.
 - Division
 
 ## Live Demo
-(Add link here after GitHub Pages is enabled)
+( https://vemireddynarasimhareddy115-coder.github.io/calculator/)
 
 ## Technologies Used
 - HTML
