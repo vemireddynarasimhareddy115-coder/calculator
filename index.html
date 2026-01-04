@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        input[type="button"] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+        }
+
+        input[type="button"]:hover {
+            background: #388e3c;
+        }
+    </style>
+
+    <script>
+        function arithemetic(operator) {
+            var x = parseInt(document.myform.num1.value);
+            var y = parseInt(document.myform.num2.value);
+            var z = document.myform.result;
+
+            if (operator == "Add") {
+                z.value = x + y;
+            }
+            else if (operator == "Sub") {
+                z.value = x - y;
+            }
+            else if (operator == "Mul") {
+                z.value = x * y;
+            }
+            else {
+                z.value = x / y;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h2>Basic Calculator</h2>
+
+        <form name="myform">
+            <input type="text" name="num1" placeholder="Enter Number 1">
+            <input type="text" name="num2" placeholder="Enter Number 2">
+            <input type="text" name="result" placeholder="Result" readonly>
+
+            <div class="buttons">
+                <input type="button" value="Add" onclick="arithemetic(this.value)">
+                <input type="button" value="Sub" onclick="arithemetic(this.value)">
+                <input type="button" value="Mul" onclick="arithemetic(this.value)">
+                <input type="button" value="Div" onclick="arithemetic(this.value)">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
